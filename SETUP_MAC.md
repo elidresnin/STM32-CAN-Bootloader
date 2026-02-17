@@ -2,6 +2,17 @@
 
 This guide will help you set up the STM32-CAN-Bootloader development environment on macOS using Visual Studio Code and STM32CubeMX.
 
+## Quick Verification
+
+After completing the setup, you can verify your installation by running:
+
+```bash
+chmod +x verify_setup.sh
+./verify_setup.sh
+```
+
+This script will check all required tools and configurations.
+
 ## Prerequisites
 
 - macOS (10.15 Catalina or later recommended)
@@ -142,15 +153,28 @@ brew install can-utils
 
 ## Configuration
 
+### Verify Your Setup
+
+Before continuing, run the verification script to check your installation:
+
+```bash
+chmod +x verify_setup.sh
+./verify_setup.sh
+```
+
+This will verify that all tools are installed correctly and in your PATH.
+
 ### 1. Update Paths in VSCode Settings
 
 The `.vscode/c_cpp_properties.json` file needs to be updated with your Mac-specific paths. This repository includes a Mac configuration, but you may need to adjust paths based on your installation.
 
 Typical ARM GCC path on macOS (Homebrew):
 ```
-/opt/homebrew/bin/arm-none-eabi-gcc  (Apple Silicon M1/M2)
+/opt/homebrew/bin/arm-none-eabi-gcc  (Apple Silicon M1/M2/M3/M4)
 /usr/local/bin/arm-none-eabi-gcc     (Intel Mac)
 ```
+
+The included Mac configuration uses the Apple Silicon path (`/opt/homebrew/bin/arm-none-eabi-gcc`). If you're on an Intel Mac, you may need to update this in `.vscode/c_cpp_properties.json`.
 
 ### 2. Configure the STM32 for VSCode Extension
 
