@@ -5,6 +5,12 @@ CAN Enabled virtual bootloader for STM32L432
 
 A CAN-based bootloader for STM32L432 microcontrollers, designed for firmware updates over CAN bus (BMS and SDC).
 
+## Quick Links
+
+- **Getting Started**: See [QUICK_START.md](QUICK_START.md)
+- **macOS Setup**: See [SETUP_MAC.md](SETUP_MAC.md) for complete macOS setup with VSCode and STM32CubeMX
+- **Windows/Linux Setup**: See below for toolchain requirements
+
 ## Setup
 
 ### macOS Setup
@@ -17,6 +23,37 @@ The project uses the STM32 for VSCode extension and requires:
 - OpenOCD (for flashing/debugging)
 - STM32CubeMX (optional, for hardware configuration)
 - Python 3 with python-can (for CAN bootloader scripts)
+
+#### Installing on Windows
+1. Install [STM32 for VSCode](https://marketplace.visualstudio.com/items?itemName=bmd.stm32-for-vscode) extension
+2. The extension will automatically download ARM GCC and OpenOCD
+3. Install [Python 3](https://www.python.org/downloads/)
+4. Install python-can: `pip install python-can`
+
+#### Installing on Linux (Ubuntu/Debian)
+```bash
+sudo apt-get update
+sudo apt-get install gcc-arm-none-eabi make openocd python3 python3-pip
+pip3 install python-can
+```
+
+## Building the Project
+
+### Using VSCode
+1. Open the project folder in VSCode
+2. Press `Cmd+Shift+B` (Mac) or `Ctrl+Shift+B` (Windows/Linux)
+3. Select "Build STM"
+
+### Using Make
+```bash
+make clean
+make
+```
+
+Build output will be in the `build/` directory:
+- `CAN-Bootloader-TEST.elf` - ELF file for debugging
+- `CAN-Bootloader-TEST.bin` - Binary file for flashing
+- `CAN-Bootloader-TEST.hex` - Hex file for flashing
 
 ## Memory Layout
 
