@@ -7,9 +7,9 @@
         "request": "launch",
         "args": [],
         "stopAtEntry": false,
-        "externalConsole": true,
-        "cwd": "c:/Users/Ali/Development/CAN-Bootloader-TEST/Core/Src",
-        "program": "c:/Users/Ali/Development/CAN-Bootloader-TEST/Core/Src/build/Debug/outDebug",
+        "externalConsole": false,
+        "cwd": "${workspaceFolder}",
+        "program": "${workspaceFolder}/build/Debug/outDebug",
         "MIMode": "gdb",
         "miDebuggerPath": "gdb",
         "setupCommands": [
@@ -32,7 +32,9 @@
         "device": "stm32l432",
         "configFiles": [
             "openocd.cfg"
-        ]
+        ],
+        "runToEntryPoint": "main",
+        "svdFile": "${workspaceRoot}/.vscode/STM32L432.svd"
     },
     {
         "showDevDebugOutput": "parsed",
@@ -42,11 +44,11 @@
         "request": "attach",
         "type": "cortex-debug",
         "servertype": "openocd",
-        "preLaunchTask": "Build STM",
         "device": "stm32l432",
         "configFiles": [
             "openocd.cfg"
-        ]
+        ],
+        "svdFile": "${workspaceRoot}/.vscode/STM32L432.svd"
     }
-]
+  ]
 }

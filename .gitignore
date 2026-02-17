@@ -9,8 +9,8 @@
 # Build output
 build/
 
-# VS Code
-.vscode/
+# VS Code - Allow config files for cross-platform setup
+# .vscode/
 
 # Python
 __pycache__/
@@ -62,9 +62,9 @@ __pycache__/
 
 # STM32CubeIDE / STM32CubeMX
 .settings/
-.project
-.cproject
-.mxproject
+# Allow .project and .mxproject for STM32CubeMX
+# .project
+# .mxproject
 Debug/
 Release/
 *.launch
@@ -74,3 +74,6 @@ Release/
 # Backup files
 *.bak
 *~
+
+# User-specific VSCode settings (keep workspace settings)
+.vscode/settings.local.json
