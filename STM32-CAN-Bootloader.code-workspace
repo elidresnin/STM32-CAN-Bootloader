@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      "*.h": "c",
+      "*.c": "c"
+    },
+    "editor.formatOnSave": false,
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "cortex-debug.armToolchainPath": "${env:HOME}/.vscode/extensions/bmd.stm32-for-vscode-*/tools/arm-none-eabi-gcc/bin",
+    "cortex-debug.openocdPath": "${env:HOME}/.vscode/extensions/bmd.stm32-for-vscode-*/tools/openocd/bin/openocd",
+    "stm32-for-vscode.openOCDPath": "${env:HOME}/.vscode/extensions/bmd.stm32-for-vscode-*/tools/openocd/bin/openocd"
+  },
+  "extensions": {
+    "recommendations": [
+      "bmd.stm32-for-vscode",
+      "ms-vscode.cpptools",
+      "marus25.cortex-debug",
+      "dan-c-underwood.arm",
+      "jeff-hykin.better-cpp-syntax",
+      "twxs.cmake",
+      "ms-vscode.makefile-tools"
+    ]
+  }
+}

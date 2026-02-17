@@ -5,6 +5,19 @@ CAN Enabled virtual bootloader for STM32L432
 
 A CAN-based bootloader for STM32L432 microcontrollers, designed for firmware updates over CAN bus (BMS and SDC).
 
+## Setup
+
+### macOS Setup
+For complete macOS setup instructions with Visual Studio Code and STM32CubeMX, see [SETUP_MAC.md](SETUP_MAC.md).
+
+### Windows/Linux Setup
+The project uses the STM32 for VSCode extension and requires:
+- ARM GCC toolchain (`arm-none-eabi-gcc`)
+- Make
+- OpenOCD (for flashing/debugging)
+- STM32CubeMX (optional, for hardware configuration)
+- Python 3 with python-can (for CAN bootloader scripts)
+
 ## Memory Layout
 
 - **Bootloader**: `0x08000000 - 0x08007FFF` (32KB)
